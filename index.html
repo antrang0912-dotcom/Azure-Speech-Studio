@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Converter Pro</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Azure Speech SDK -->
+  <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <div class="container">
+    <h1>Speech Converter</h1>
+
+    <!-- Azure Config Panel -->
+    <div class="config">
+      <input id="apiKey" placeholder="Enter Azure API Key" />
+      <input id="region" placeholder="Enter Region (e.g. eastus)" />
+      <button onclick="saveConfig()">💾 Save</button>
+    </div>
+
+    <textarea id="textInput" placeholder="Type or speak something..."></textarea>
+
+    <div class="buttons">
+      <button onclick="startSpeechToText()">🎤 Speech → Text</button>
+      <button onclick="convertTextToSpeech()">🔊 Text → Speech</button>
+      <button onclick="copyText()">📋 Copy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
